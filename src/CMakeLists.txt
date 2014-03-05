@@ -87,9 +87,10 @@ add_executable(tesseract WIN32
 	game/scoreboard.cpp
 	game/server.cpp
 	game/waypoint.cpp
-	game/weapon.cpp)
+	game/weapon.cpp
+	vcpp/tesseract.rc)
 set_target_properties(tesseract PROPERTIES RUNTIME_OUTPUT_DIRECTORY  ${CMAKE_SOURCE_DIR}/${BIN_DIRECTORY})
 set_target_properties(tesseract PROPERTIES RUNTIME_OUTPUT_DIRECTORY_DEBUG  ${CMAKE_SOURCE_DIR}/${BIN_DIRECTORY})
 set_target_properties(tesseract PROPERTIES RUNTIME_OUTPUT_DIRECTORY_RELEASE ${CMAKE_SOURCE_DIR}/${BIN_DIRECTORY}) 
 set_target_properties(tesseract PROPERTIES RUNTIME_OUTPUT_DIRECTORY_RELWITHDEBINFO ${CMAKE_SOURCE_DIR}/${BIN_DIRECTORY}) 
-target_link_libraries (tesseract SDL2 SDL2_image SDL2_mixer DbgHelp opengl32 enet zdll ws2_32 winmm)	
+target_link_libraries (tesseract SDL2 SDL2_image SDL2_mixer opengl32 enet zdll ws2_32 winmm)	
