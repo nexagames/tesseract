@@ -1,5 +1,7 @@
-Tesseract is a fork of the Cube 2: Sauerbraten engine. The goal of Tesseract
-is to make mapping more fun by using modern dynamic rendering techniques, so
+# Tesseract
+
+This repository is a modified version of Tesseract. Tesseract is a fork of the Cube 2: Sauerbraten engine.
+The goal of Tesseract is to make mapping more fun by using modern dynamic rendering techniques, so
 that you can get instant feedback on lighting changes, not just geometry.
 
 No more long calclight pauses... just plop down the light, move it, change its
@@ -24,7 +26,7 @@ It provides a bunch of new rendering features such as:
 * runs on both OpenGL Core (3.0+) and legacy (2.1+) contexts
 * Oculus Rift support
 
-Editing:
+## Editing:
 
 To make shadowmapped point lights, just make light entities as normal. Optionally you can control the shadowing properties of the light using attribute 5: 0 = shadows, 1 = no shadows, 2 = static shadows - world and mapmodels only (no playermodels or pickups). Shadowmaps are cached from frame to frame if no dynamic entities such as playermodels are rendered into them, so static lights (2) will generally be much faster than normal lights (0) during gameplay and should be used where possible. Unshadowed lights (1) are even faster as they further reduce shading costs, so they should also be used where possible.
 
